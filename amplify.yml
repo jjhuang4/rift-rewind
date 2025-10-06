@@ -3,14 +3,16 @@ frontend:
   phases:
     preBuild:
       commands:
+        - cd rift-rewind-proj
         - npm ci
     build:
       commands:
+        - cd rift-rewind-proj
         - npm run build
   artifacts:
-    baseDirectory: .next
+    baseDirectory: rift-rewind-proj/.next
     files:
       - '**/*'
   cache:
     paths:
-      - node_modules/**/*
+      - rift-rewind-proj/node_modules/**/*
