@@ -1,0 +1,19 @@
+version: 1
+frontend:
+  phases:
+    # IMPORTANT - Please verify your build commands
+    preBuild:
+      commands:
+        - npm install
+    build:
+      commands: # []
+        - npm run build
+  artifacts:
+    # IMPORTANT - Please verify your build output directory
+    baseDirectory: .next # /
+    files:
+      - '**/*'
+  cache:
+    paths: # []
+      - node_modules/** # recommended to avoid stale state in builds
+      # - .next/**  # could conflict with Amplify build process, but may also improve build speed
