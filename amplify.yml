@@ -6,7 +6,7 @@ frontend:
         - cd rift-rewind-proj && npm ci
     build:
       commands:
-        - cd rift-rewind-proj &&npm run build
+        - npm run build
   artifacts:
     baseDirectory: rift-rewind-proj/.next
     files:
